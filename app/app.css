@@ -146,3 +146,28 @@ body {background-color: #8E8D8A;}
     padding-left: 15px;
     padding-right: 15px;
 }
+
+.customform form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+
+}
+
+/*.cardwrapper {*/
+    /*display: flex;*/
+    /*align-content: center;*/
+/*}*/
+
+.customcard {
+    background: #EAE7DC;
+    padding: 5px;
+    margin: 10px auto; /* Added */
+    float: none; /* Added */
+    /*margin-bottom: 10px; !* Added *!*/
+}
+
+.customcard .card-title {
+    color: #E98074;
+}
