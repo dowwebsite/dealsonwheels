@@ -1,4 +1,9 @@
 /* app css stylesheet */
+/*@import "~@angular/material/prebuilt-themes/indigo-pink.css";*/
+
+body {background-color: #8E8D8A;}
+
+.
 
 .menu {
   list-style: none;
@@ -22,4 +27,122 @@
 .menu > li + li:before {
   content: "|";
   padding-right: 0.3em;
+}
+
+/*.cars {*/
+    /*display: inline-flex;*/
+    /*flex-direction: row;*/
+    /*justify-content: space-around;*/
+    /*flex-flow: row wrap;*/
+/*}*/
+
+/*.display {*/
+    /*display: flex;*/
+    /*align-items: center;*/
+    /*!*justify-content: center;*!*/
+/*}*/
+
+/*.jumbotron {*/
+    /*!*background-color: #D8C3A5;*!*/
+    /*background: rgba(216, 195, 165, 0.5);*/
+/*}*/
+
+/*.jumbotron .img{*/
+    /*background-image: url(resources/images/drone2.png);*/
+    /*width: 100%;*/
+    /*height: 100%;*/
+    /*background-size: cover;*/
+    /*overflow: hidden;*/
+    /*position:absolute;*/
+    /*opacity: 0.5;*/
+/*}*/
+
+.jumbotron-billboard .img {
+    margin-bottom: 0px;
+    opacity: 0.4;
+    color: #D8C3A5;
+    background: #000 url(resources/images/drone2.png) top center no-repeat;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    overflow: hidden;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:1;
+}
+.jumbotron h2 {margin-top:0;}
+.jumbotron {
+    position:relative;
+    padding-top:50px;
+    padding-bottom:50px;
+}
+.jumbotron .container {
+    position:relative;
+    z-index:2;
+    /*width: 2000px !important;*/
+    /*margin: 10px;*/
+}
+
+/*@media screen and (max-width: 768px) {*/
+    /*.jumbotron {*/
+        /*padding-top:20px;*/
+        /*padding-bottom:20px;*/
+    /*}*/
+/*}*/
+
+.display{
+    padding: 10px;
+    margin: 50px;
+    list-style: none;
+
+    /*max-width:1600px;*/
+
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    -webkit-flex-flow: row wrap;
+    justify-content: center;
+    /*align-items: center;*/
+}
+
+.card{
+    background: #EAE7DC;
+    padding: 5px;
+    /*width: 200px;*/
+    /*height: 150px;*/
+    margin: 10px;
+
+    /*line-height: 150px;*/
+    /*color: white;*/
+    /*font-weight: bold;*/
+    /*font-size: 3em;*/
+    /*text-align: center;*/
+
+
+}
+
+.card:hover {
+    background-color: #E98074;
+    color: #EAE7DC;
+}
+
+.card .attribute {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.searchrow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.searchrow .input-group {
+    padding-left: 15px;
+    padding-right: 15px;
 }
