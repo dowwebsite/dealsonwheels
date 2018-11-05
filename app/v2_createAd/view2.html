@@ -1,0 +1,114 @@
+<!--<div class="customform">-->
+<!--</div>-->
+<div class="cardwrapper">
+    <div class="customcard" style="width: 80rem;">
+        <div class="card-body">
+            <h5 class="card-title">Advertise your car for free!</h5>
+            <form>
+                <!-- Registration and price -->
+                <div class="form-row">
+                    <div class="col">
+                        <input ng-blur="getInfoByLicencePlate()" ng-model="registrationNumber" type="text"
+                               class="form-control" id="registrationNo" aria-describedby="emailHelp"
+                               placeholder="Registration number">
+                    </div>
+                    <div class="col">
+                        <input ng-model="carInfo.type" type="text" class="form-control" id="price"
+                               aria-describedby="typeHelp" placeholder="Price (ISK)">
+                    </div>
+                </div>
+
+                <!-- Manufacturer and Subtype -->
+                <div class="form-row">
+                    <div class="col">
+                        <input ng-model="carInfo.type" type="text" class="form-control" id="type"
+                               aria-describedby="typeHelp" placeholder="Manufacturer">
+                    </div>
+                    <div class="col">
+                        <input ng-model="carInfo.subType" type="text" class="form-control" id="subtype"
+                               aria-describedby="typeHelp"
+                               placeholder="Subtype">
+                    </div>
+                </div>
+
+                <!-- Registered at and Next checkup-->
+                <div class="form-row">
+                    <div class="col">
+                        <input ng-model="carInfo.registeredAt" type="text" class="form-control" id="registeredAt"
+                               aria-describedby="typeHelp" placeholder="Date of registration">
+                    </div>
+                    <div class="col">
+                        <input ng-model="carInfo.nextCheck" type="text" class="form-control" id="nextCheck"
+                               aria-describedby="typeHelp" placeholder="Next check">
+                    </div>
+                </div>
+
+                <!-- Status and Color -->
+                <div class="form-row">
+                    <div class="col">
+                        <input ng-model="carInfo.status" type="text" class="form-control" id="status"
+                               aria-describedby="typeHelp"
+                               placeholder="Status">
+                    </div>
+                    <div class="col">
+                        <input ng-model="carInfo.color" type="text" class="form-control" id="color"
+                               aria-describedby="typeHelp"
+                               placeholder="Car color">
+                    </div>
+                </div>
+
+                <!-- Weight and Pollution-->
+                <div class="form-row">
+                    <div class="col">
+                        <input ng-model="carInfo.weight" type="text" class="form-control" id="weight"
+                               aria-describedby="typeHelp"
+                               placeholder="Car weight">
+                    </div>
+                    <div class="col">
+                        <input ng-model="carInfo.pollution" type="text" class="form-control" id="pollution"
+                               aria-describedby="typeHelp" placeholder="Car type">
+                    </div>
+                </div>
+
+
+                <!-- Picture upload -->
+                <div class="container">
+
+                <div class="form-row">
+                    <div class="col">
+                        <div class="form-group">
+                            <div class="input-group mb-3">
+                                <!--<label class="btn btn-secondary btn-file">-->
+                                    <!--Upload Image <input type="file" placeholder="Upload image" hidden>-->
+                                <!--</label>-->
+                                <input type="file" class="form-control" placeholder="Upload image" aria-label="Upload image" aria-describedby="basic-addon2">
+                            </div>
+                            <!--<img id='img-upload'/>-->
+                        </div>
+                    </div>
+                </div>
+
+                <!--<div class="form-row">-->
+                    <!--<div class="col-md-6">-->
+                        <!--<div class="form-group">-->
+                            <!--<div class="input-group">-->
+                                <!--<span class="input-group-btn">-->
+                                    <!--<span class="btn btn-warning btn-file">-->
+                                        <!--Upload Image <input type="file" placeholder="Upload Image" id="imgInp" hidden>-->
+                                    <!--</span>-->
+                                <!--</span>-->
+                                <!--&lt;!&ndash;<input type="text" class="form-control" readonly>&ndash;&gt;-->
+                            <!--</div>-->
+                            <!--<img id='img-upload'/>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--</div>-->
+
+                <div class="form-row">
+                    <button type="submit" class="btn btn-dark">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

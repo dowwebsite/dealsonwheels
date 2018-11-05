@@ -1,13 +1,11 @@
 /**
  * Created by edda on 3.11.2018.
  */
-'use strict';
-
-angular.module('myApp.about', ['ngRoute'])
-
+angular
+    .module('myApp.about', ['ngRoute'])
     .config(['$routeProvider', function($routeProvider) {
         $routeProvider.when('/about', {
-            templateUrl: 'about/about.html',
+            templateUrl: 'v3_about/about.html',
             controller: 'AboutCtrl'
         });
     }])

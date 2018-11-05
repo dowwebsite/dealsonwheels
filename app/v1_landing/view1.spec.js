@@ -1,10 +1,10 @@
 'use strict';
 
-describe('myApp.view1 module', function() {
+describe('myApp.v1_landing module', function() {
 
-  beforeEach(module('myApp.view1'));
+  beforeEach(module('myApp.v1_landing'));
 
-  describe('view1 controller', function(){
+  describe('v1_landing controller', function(){
 
     it('should ....', inject(function($controller) {
       //spec body

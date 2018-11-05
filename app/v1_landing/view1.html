@@ -5,7 +5,7 @@
             <div class="input-group mb-3">
                 <select class="custom-select" id="inputGroupSelect01">
                     <option selected>Car Manufacturer</option>
-                    <option ng-repeat="maker in vm.carMakers" value="{{ maker.value }}">{{ maker.name }}</option>
+                    <option ng-repeat="maker in carMakers" value="{{ maker.value }}">{{ maker.name }}</option>
                 </select>
             </div>
             <div class="input-group mb-3">
@@ -71,16 +71,16 @@
 </div>
 
 <div class="display">
-    <div class="cars" ng-repeat="car in vm.cars">
+    <div class="cars" ng-repeat="ad in ads">
         <div class="card" style="width: 20rem;">
-            <img class="card-img-top" src="{{car.img}}" alt="Card image cap">
+            <img class="card-img-top" src="{{ad.fields.image_url }}" alt="Card image cap">
             <div class="card-body">
-                <h4 class="card-title">{{ car.year }} {{ car.name }} {{ car.model }}</h4>
+                <h4 class="card-title">{{ ad.fields.car.year }} {{ ad.fields.car.manufacturer }} {{ ad.fields.car.model }}</h4>
                 <div class="attribute">
                     <div><b> Price: </b></div>
-                    <div><p> {{ car.price }} {{ car.currency }} </p></div>
+                    <div><p> {{ ad.fields.price }} {{ ad.fields.currency }} </p></div>
                 </div>
-                <p class="card-text">{{ car.description | limitTo: 120 }}...</p>
+                <p class="card-text">{{ ad.fields.description | limitTo: 120 }}...</p>
                 <a href="#" class="btn btn-dark">View</a>
             </div>
         </div>

@@ -2,14 +2,76 @@
 //
 angular
     .module('myApp.fact', [])
-    .factory('fact', function() {
-        return {
-            getAllCars: getAllCars
+    .factory('fact', function($http) {
+        var baseUrl = 'http://54.229.222.0/';
 
+        return {
+            getAllCars: getAllCars,
+            getCarMakers: getCarMakers,
+            getInfoByLicencePlate: getInfoByLicencePlate,
+            getAllAdvertisements: getAllAdvertisements
         };
 
+        function getInfoByLicencePlate(number){
+            return $http({
+                method: 'GET',
+                url: 'http://apis.is/car?number=' + number
+            }).then(function successCallback(response) {
+                console.log('Success: ', response);
+                return response.data.results[0];
+            }, function errorCallback(response) {
+                console.log('Error: ', response);
+                return response;
+            });
+        }
+
         function getAllCars(){
-            return cars;
+            return $http({
+                method: 'GET',
+                url: baseUrl + 'get/all/cars'
+            }).then(function successCallback(response) {
+                console.log('Success: ', response);
+                // return response.data.results[0];
+            }, function errorCallback(response) {
+                console.log('Error: ', response);
+                // return response;
+            });
+        };
+
+
+        function getAllAdvertisements(){
+            return $http({
+                method: 'GET',
+                url: baseUrl + 'get/all/advertisements'
+            }).then(function successCallback(response) {
+                console.log('Success: ', response);
+                return response.data;
+
+            }, function errorCallback(response) {
+                console.log('Error: ', response);
+                // return response;
+            });
+        };
+
+
+        function getCarMakers(){
+            return [
+                {
+                    "name": "Alfa Romero",
+                    "value": "1"
+                },
+                {
+                    "name": "Aston Martin",
+                    "value": "2"
+                },
+                {
+                    "name": "Audi",
+                    "value": "3"
+                },
+                {
+                    "name": "BMW",
+                    "value": "4"
+                }]
         }
 
         // factory function body that constructs shinyNewServiceInstance
