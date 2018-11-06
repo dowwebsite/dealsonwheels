@@ -9,7 +9,7 @@ angular.module('myApp.createAd', ['ngRoute'])
         });
     }])
 
-    .controller('View2Ctrl', ['$http', 'fact', '$scope', function($http, fact, $scope) {
+    .controller('View2Ctrl', ['$http', 'fact', '$scope', '$location', function($http, fact, $scope, $location) {
         $scope.registrationNumber = '';
         $scope.submit = submit;
         $scope.imageLabel = '';
@@ -26,41 +26,33 @@ angular.module('myApp.createAd', ['ngRoute'])
 
 
         function submit(car){
-            // var jsonObject = {
-            //     "username": car.userName,
-            //     "manufacturer": car.type,
-            //     "model": car.subType,
-            //     "registration_number": car.registrationNumber,
-            //     "color": car.color,
-            //     "year": car.registeredAt,
-            //     "weight": car.weight,
-            //     "next_check": car.nextCheck,
-            //     "image_url": "resources/images/" + $scope.imageLabel,
-            //     "pollution": car.pollution,
-            //     "price": car.price,
-            //     "description": car.description
-            // };
+
+            if(!$scope.imageLabel){
+                $scope.imageLabel = '1989-jag.jpg'
+            }
 
             var jsonObject = {
                 username: car.username,
                 manufacturer: car.type,
                 model: car.subType,
-                registration_number: car.registrationNumber,
+                registration_number: $scope.registrationNumber,
                 color: car.color,
                 year: car.registeredAt,
-                weight: car.weight,
+                weight: 1348,
                 next_check: car.nextCheck,
                 image_url: "resources/images/" + $scope.imageLabel,
                 pollution: car.pollution,
                 price: car.price,
-                description: car.description
+                description: $scope.description,
+                driven: 100
             };
 
 
+            // var obj = JSON.stringify(testing)
+            // console.log('json: ', jsonObject);
+            fact.postAd(jsonObject);
+            $location.path( '/');
 
-            var obj = JSON.stringify(jsonObject)
-            console.log('json: ', obj);
-            fact.postAd(obj);
         }
 
 

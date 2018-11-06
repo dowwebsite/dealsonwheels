@@ -121,6 +121,8 @@ body {background-color: #8E8D8A;}
     /*width: 200px;*/
     /*height: 150px;*/
     margin: 10px;
+    min-height: 450px;
+    max-height: 450px;
 
     /*line-height: 150px;*/
     /*color: white;*/
