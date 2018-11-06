@@ -5,7 +5,7 @@
             <div class="input-group mb-3">
                 <select class="custom-select" id="inputGroupSelect01">
                     <option selected>Car Manufacturer</option>
-                    <option ng-repeat="maker in carMakers" value="{{ maker.value }}">{{ maker.name }}</option>
+                    <option ng-repeat="maker in carMakers" value="{{ maker.fields.name }}">{{ maker.fields.name }}</option>
                 </select>
             </div>
             <div class="input-group mb-3">

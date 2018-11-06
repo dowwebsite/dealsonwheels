@@ -209,3 +209,10 @@ body {background-color: #8E8D8A;}
 /*#img-upload{*/
     /*width: 100%;*/
 /*}*/
+
+#wrapper {
+    text-align: center;
+}
+#yourdiv {
+    display: inline-block;
+}

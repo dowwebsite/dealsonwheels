@@ -8,12 +8,22 @@
                 <!-- Registration and price -->
                 <div class="form-row">
                     <div class="col">
+                        <label for="registrationNo">
+                            <small class="form-text text-muted">
+                                Registration
+                            </small>
+                        </label>
                         <input ng-blur="getInfoByLicencePlate()" ng-model="registrationNumber" type="text"
                                class="form-control" id="registrationNo" aria-describedby="emailHelp"
                                placeholder="Registration number">
                     </div>
                     <div class="col">
-                        <input ng-model="carInfo.type" type="text" class="form-control" id="price"
+                        <label for="price">
+                            <small class="form-text text-muted">
+                                Price (ISK)
+                            </small>
+                        </label>
+                        <input ng-model="carInfo.price" type="text" class="form-control" id="price"
                                aria-describedby="typeHelp" placeholder="Price (ISK)">
                     </div>
                 </div>
@@ -21,94 +31,151 @@
                 <!-- Manufacturer and Subtype -->
                 <div class="form-row">
                     <div class="col">
+                        <label for="type">
+                            <small class="form-text text-muted">
+                                Manufacturer
+                            </small>
+                        </label>
                         <input ng-model="carInfo.type" type="text" class="form-control" id="type"
                                aria-describedby="typeHelp" placeholder="Manufacturer">
                     </div>
                     <div class="col">
+                        <label for="subtype">
+                            <small class="form-text text-muted">
+                                Model
+                            </small>
+                        </label>
                         <input ng-model="carInfo.subType" type="text" class="form-control" id="subtype"
                                aria-describedby="typeHelp"
-                               placeholder="Subtype">
+                               placeholder="Model">
                     </div>
                 </div>
 
                 <!-- Registered at and Next checkup-->
                 <div class="form-row">
                     <div class="col">
+                        <label for="registeredAt">
+                            <small class="form-text text-muted">
+                                Year
+                            </small>
+                        </label>
                         <input ng-model="carInfo.registeredAt" type="text" class="form-control" id="registeredAt"
-                               aria-describedby="typeHelp" placeholder="Date of registration">
+                               aria-describedby="typeHelp" placeholder="Year">
                     </div>
                     <div class="col">
+                        <label for="nextCheck">
+                            <small class="form-text text-muted">
+                                Next checkup
+                            </small>
+                        </label>
                         <input ng-model="carInfo.nextCheck" type="text" class="form-control" id="nextCheck"
-                               aria-describedby="typeHelp" placeholder="Next check">
+                               aria-describedby="typeHelp" placeholder="Next checkup">
                     </div>
                 </div>
 
                 <!-- Status and Color -->
                 <div class="form-row">
                     <div class="col">
+                        <label for="status">
+                            <small class="form-text text-muted">
+                                Current state
+                            </small>
+                        </label>
                         <input ng-model="carInfo.status" type="text" class="form-control" id="status"
                                aria-describedby="typeHelp"
-                               placeholder="Status">
+                               placeholder="Current state">
                     </div>
                     <div class="col">
+                        <label for="color">
+                            <small class="form-text text-muted">
+                                Color
+                            </small>
+                        </label>
                         <input ng-model="carInfo.color" type="text" class="form-control" id="color"
                                aria-describedby="typeHelp"
-                               placeholder="Car color">
+                               placeholder="Color">
                     </div>
                 </div>
 
                 <!-- Weight and Pollution-->
                 <div class="form-row">
                     <div class="col">
+                        <label for="weight">
+                            <small class="form-text text-muted">
+                                Weight
+                            </small>
+                        </label>
                         <input ng-model="carInfo.weight" type="text" class="form-control" id="weight"
                                aria-describedby="typeHelp"
-                               placeholder="Car weight">
+                               placeholder="Weight">
                     </div>
                     <div class="col">
+                        <label for="pollution">
+                            <small class="form-text text-muted">
+                                Pollution
+                            </small>
+                        </label>
                         <input ng-model="carInfo.pollution" type="text" class="form-control" id="pollution"
-                               aria-describedby="typeHelp" placeholder="Car type">
+                               aria-describedby="typeHelp" placeholder="Pollution">
                     </div>
                 </div>
 
+                <!-- Description -->
+                <div class="form-row">
+                    <label for="description">
+                        <small class="form-text text-muted">
+                            Description
+                        </small>
+                    </label>
+                    <textarea class="form-control" id="description" rows="3"></textarea>
+                </div>
 
-                <!-- Picture upload -->
-                <div class="container">
-
+                <!-- Photo upload -->
                 <div class="form-row">
                     <div class="col">
-                        <div class="form-group">
-                            <div class="input-group mb-3">
-                                <!--<label class="btn btn-secondary btn-file">-->
-                                    <!--Upload Image <input type="file" placeholder="Upload image" hidden>-->
-                                <!--</label>-->
-                                <input type="file" class="form-control" placeholder="Upload image" aria-label="Upload image" aria-describedby="basic-addon2">
+                        <label for="username">
+                            <small class="form-text text-muted">
+                                Username
+                            </small>
+                        </label>
+                        <input ng-model="carInfo.username" type="text" class="form-control" id="username"
+                               aria-describedby="typeHelp" placeholder="Username">
+                    </div>
+                    <div class="col">
+                        <label for="imgInp">
+                            <small class="form-text text-muted">
+                                Upload image
+                            </small>
+                        </label>
+                        <div class="container">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <div class="input-group input-group-sm mb-3">
+                                        <span class="input-group-btn">
+                                            <span class="btn btn-default btn-file">
+                                                <input type="file" id="imgInp">
+                                            </span>
+                                        </span>
+                                        <input type="text" class="form-control" readonly hidden>
+                                    </div>
+                                </div>
                             </div>
-                            <!--<img id='img-upload'/>-->
                         </div>
                     </div>
                 </div>
+                <div id="wrapper">
+                    <div id="yourdiv">
+                        <img id='img-upload' class="img-fluid"/>
+                    </div>
+                </div>
 
-                <!--<div class="form-row">-->
-                    <!--<div class="col-md-6">-->
-                        <!--<div class="form-group">-->
-                            <!--<div class="input-group">-->
-                                <!--<span class="input-group-btn">-->
-                                    <!--<span class="btn btn-warning btn-file">-->
-                                        <!--Upload Image <input type="file" placeholder="Upload Image" id="imgInp" hidden>-->
-                                    <!--</span>-->
-                                <!--</span>-->
-                                <!--&lt;!&ndash;<input type="text" class="form-control" readonly>&ndash;&gt;-->
-                            <!--</div>-->
-                            <!--<img id='img-upload'/>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--</div>-->
 
+                <!-- Button -->
                 <div class="form-row">
-                    <button type="submit" class="btn btn-dark">Submit</button>
+                    <button ng-click="submit(carInfo)" type="submit" class="btn btn-dark">Submit</button>
                 </div>
             </form>
         </div>
+    </div>
     </div>
 </div>

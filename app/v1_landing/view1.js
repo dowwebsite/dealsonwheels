@@ -15,6 +15,9 @@ angular.module('myApp.landing', ['ngRoute'])
             });
 
 
-        $scope.carMakers = fact.getCarMakers();
+        fact.getCarMakers()
+            .then(function(carMakerArr){
+                $scope.carMakers = carMakerArr;
+            })
 
     }]);
